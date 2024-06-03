@@ -13,9 +13,7 @@ public:
 
    int max();
 
-   int llcm(int a, int b);
-
-   lcm operator*(lcm &lcm2);
+   lcm operator*(const lcm &lcm2);
 };
 
 #endif //LCM_H

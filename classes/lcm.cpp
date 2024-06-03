@@ -28,14 +28,10 @@ int lcm::max() {
     return max;
 }
 
-int lcm::llcm(const int a, const int b) {
-    return std::lcm(a, b);
-}
-
-lcm lcm::operator*(lcm &lcm2) {
+lcm lcm::operator*(const lcm &lcm2) {
     lcm result;
     for (int i = 0; i < 3; i++) {
-        result.array[i] = llcm(array[i], lcm2.array[i]);
+        result.array[i] = std::lcm(array[i], lcm2.array[i]);
     }
 
     return result;
